@@ -1,26 +1,20 @@
-{{! <!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css" />
-    <title>Brasileirão 2022</title>
-</head>
-<body>
-    <header>
-        <div class='header--logo'>
-            <img src='img/logo-cbf.png' alt='Logo CBF'/>
-            <h1>Brasileirão 2022</h1>
-        </div>
-        <form method='GET' class='header--search'>
-            
-            <input placeHolder= 'Pesquisar por time...' type='text'/> 
-            <button type='submit' ><img src='img/search.svg' alt='lupa'/></button>
-        
-        </form>
-    </header> }}
+{{>partials/header}}
 
-{{>partials/header}}    
-</body>
-</html>
+{{#banner}}
+<div class='banner'> <img src='img/{{banner}}' alt='Logo Campeonato'/> </div>
+{{/banner}}
+<div class='teams'>
+{{#listTeams}}
+
+    <div class='teams--list'>
+            <img src='img/{{image}}' alt='Símbolo do Time' class='teams--img'/>
+            <div class='team-infos'>
+                <section><strong>Nome:</strong> {{name}}</section>
+                <section><strong>Estado:</strong> {{state}}</section>
+                <section><strong>Divisão:</strong> {{division}}</section>
+            </div>
+    </div>
+{{/listTeams}}
+</div>
+
+{{>partials/footer}}
