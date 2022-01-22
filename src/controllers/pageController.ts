@@ -12,9 +12,29 @@ export const home = (req: Request, res: Response) => {
 }
 
 export const serieA = (req: Request, res: Response) => {
-    res.render('pages/seriea.mustache')
+    let listTeams = Teams.getAllTeams()
+    listTeams = listTeams.filter((item) => {
+        if(item.division === 'Serie A') {
+            return true
+        }
+    })
+
+    res.render('pages/seriea.mustache', {
+        listTeams,
+        banner: 'seriea-banner.jpg'
+    })
 }
 
 export const serieB = (req: Request, res: Response) => {
-    res.render('pages/serieb.mustache')
+    let listTeams = Teams.getAllTeams()
+    listTeams = listTeams.filter((item) => {
+        if(item.division === 'Serie B') {
+            return true
+        }
+    })
+
+    res.render('pages/serieb.mustache', {
+        listTeams,
+        banner: 'serieb-banner.jpg'
+    })
 }

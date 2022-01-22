@@ -92,6 +92,18 @@ ul li a:hover, ul .active {
     border-radius: 10px;
 }
 
+.titulo-page {
+    margin: 50px 0;
+    font-size: 7vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: blue;
+    background-color: whitesmoke;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
 .teams {
     margin: 30px 20px;
     display: flex;
