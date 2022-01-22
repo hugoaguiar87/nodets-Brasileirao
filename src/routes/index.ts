@@ -10,4 +10,6 @@ router.get('/seriea', pageController.serieA)
 
 router.get('/serieb', pageController.serieB)
 
+router.get('/pesquisa', pageController.search)
+
 export default router;

@@ -1,3 +1,5 @@
+import { isTypeNode } from "typescript";
+
 type Division = 'Serie A' | 'Serie B'
 type Team = {
     name: string,
@@ -56,5 +58,12 @@ export const Teams = {
             [data[i], data[j]] = [data[j], data[i]];
         }
         return data;
+    },
+    getSearchTeams: (n: string): Team[] => {
+        return data.filter(item => {
+            if(item.name.toLowerCase().includes(n.toLowerCase())){
+                return true
+            }
+        })
     }
 }

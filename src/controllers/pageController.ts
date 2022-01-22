@@ -38,3 +38,14 @@ export const serieB = (req: Request, res: Response) => {
         banner: 'serieb-banner.jpg'
     })
 }
+
+export const search = (req: Request, res: Response) => {
+    let query: string = req.query.q as string
+
+    let listTeams = Teams.getSearchTeams(query)
+
+    res.render('pages/home.mustache', {
+        listTeams,
+        query
+    })
+}
