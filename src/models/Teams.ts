@@ -48,3 +48,9 @@ const data: Team[] = [
     {name: 'Vasco', state: 'RJ', division: 'Serie B', image: 'vasco.svg'},
     {name: 'Vila Nova', state: 'GO', division: 'Serie B', image: 'vilanova.svg'},
 ]
+
+export const Teams = {
+    getAllTeams: (): Team[] => {
+        return data.sort()
+    }
+}
