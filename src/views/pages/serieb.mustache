@@ -1,0 +1,25 @@
+{{>partials/header}}
+
+
+{{#banner}}
+<div class='banner'> <img src='img/{{banner}}' alt='Logo Campeonato'/> </div>
+{{/banner}}
+
+<h1 class='titulo-page'>Campeonato Brasileiro - Série B</h1>
+
+
+<div class='teams'>
+{{#listTeams}}
+
+    <div class='teams--list'>
+            <img src='img/{{image}}' alt='Símbolo do Time' class='teams--img'/>
+            <div class='team-infos'>
+                <section><strong>Nome:</strong> {{name}}</section>
+                <section><strong>Estado:</strong> {{state}}</section>
+                <section><strong>Divisão:</strong> {{division}}</section>
+            </div>
+    </div>
+{{/listTeams}}
+</div>
+
+{{>partials/footer}}
