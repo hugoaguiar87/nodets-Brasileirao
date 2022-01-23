@@ -1,13 +1,15 @@
 import { Request, Response } from "express";
 
 import { Teams } from "../models/Teams";
+import { navActive } from "../helpers/navActive";
 
 export const home = (req: Request, res: Response) => {
     let listTeams = Teams.getAllTeams()
 
     res.render('pages/home.mustache', {
         listTeams,
-        banner: 'brasileirao-banner.jpeg'
+        banner: 'brasileirao-banner.jpeg',
+        menu: navActive('Todos')
     })
 }
 
@@ -21,7 +23,8 @@ export const serieA = (req: Request, res: Response) => {
 
     res.render('pages/seriea.mustache', {
         listTeams,
-        banner: 'seriea-banner.jpg'
+        banner: 'seriea-banner.jpg',
+        menu: navActive('SerieA')
     })
 }
 
@@ -35,7 +38,8 @@ export const serieB = (req: Request, res: Response) => {
 
     res.render('pages/serieb.mustache', {
         listTeams,
-        banner: 'serieb-banner.jpg'
+        banner: 'serieb-banner.jpg',
+        menu: navActive('SerieB')
     })
 }
 

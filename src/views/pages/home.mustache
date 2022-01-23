@@ -5,12 +5,11 @@
 <div class='banner'> <img src='img/{{banner}}' alt='Logo Campeonato'/> </div>
 {{/banner}}
 
-<h1 class='titulo-page'>Campeonato Brasileiro - Todos os Times</h1>
-
+<h1 class='titulo-page'>Campeonato Brasileiro</h1>
 
 <div class='teams'>
 {{#listTeams}}
-
+    
     <div class='teams--list'>
             <img src='img/{{image}}' alt='Símbolo do Time' class='teams--img'/>
             <div class='team-infos'>
@@ -22,7 +21,7 @@
 {{/listTeams}}
 
 {{^listTeams}}
-    Não tem dados para essa pesquisa!
+    <h3>O time {{query}} não foi encontrado!</h3>
 {{/listTeams}}
 </div>
 

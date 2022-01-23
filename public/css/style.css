@@ -62,7 +62,11 @@ ul {
 }
 
 ul li {
-    overflow: hidden;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 ul li a {
@@ -74,7 +78,7 @@ ul li a {
     color: inherit;
 }
 
-ul li a:hover, ul .active {
+ul li:hover, ul .active {
     background-color: #000078;
 }
 
@@ -154,4 +158,16 @@ footer {
 
 footer section a {
     color: inherit;
+}
+
+.notFound{
+    height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notFound h2 {
+    font-size: 10vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
